@@ -178,9 +178,9 @@ document.getElementById('geolocation').addEventListener('click', function() {
         navigator.geolocation.getCurrentPosition(function(position) {
             const lat = position.coords.latitude;
             const lon = position.coords.longitude;
-            // Burada, lat ve lon değerlerini kullanarak hava durumu verisi çekebilirsiniz.
+            
             console.log('Latitude: ' + lat + ', Longitude: ' + lon);
-            // Örneğin hava durumu API'sini çağırmak için burada bir AJAX isteği yapabilirsiniz.
+            
         }, function() {
             alert('Konum bilgilerinizi paylaşmayı reddettiniz.');
         });
@@ -377,7 +377,7 @@ function hslToRgb(h, s, l) {
 
     if (s == 0) {
 
-        r = g = b = l; // achromatic
+        r = g = b = l; 
 
     } else {
 
