@@ -8,15 +8,15 @@ html, body{
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Scrollbar'ları gizlemek için */
+    overflow: hidden; 
 }
 body{
     font-weight:bold;
 }
 .meteo-title {
-    background: rgba(0, 0, 0, 0.7); /* Siyah yarı saydam arka plan */
-    padding: 10px; /* İçerik ile kenar arasındaki boşluk */
-    border-radius: 5px; /* Kenarları yuvarlatma */
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 10px; 
+    border-radius: 5px; 
 }
         }
         .video-background {
@@ -25,7 +25,7 @@ body{
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Diğer içeriklerin altında kalmasını sağlar */
+            z-index: -1; 
             overflow: hidden;
         }
         .video-background video {
@@ -37,23 +37,22 @@ body{
             transform: translate(-50%, -50%);
         }
         .content {
-            position: relative; /* İçeriğin konumlandırılmasını sağlar */
-            z-index: 1; /* İçeriği ön plana almak için */
-            color: white; /* Yazı rengini ayarlamak için */
-            text-align: center; /* Metni ortalamak için */
+            position: relative; 
+            z-index: 1; 
+            color: white; 
+            text-align: center; 
             padding: 20px;
         }
-body{
-    /* Default background */
+body{   
     background: linear-gradient(#0f7de9,#23f2eb);
     color: #fff;
     font-family:Lobster;
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-    background-size: cover; /* Arka planın tüm alanı kaplamasını sağlar */
-    background-repeat: no-repeat; /* Arka planın tekrarlanmamasını sağlar */
-    background-attachment: fixed; /* Arka planın kaydırılmasını önler */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
 }
 .container{
     padding-bottom: 80px;
@@ -87,19 +86,19 @@ h2 a:hover{
     padding: 0 10px;
 }
 #backgroundVideo {
-    position: fixed; /* Videoyu sabitleyin */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Videonun ekranı kaplamasını sağla */
-    z-index: -1; /* Videoyu diğer içeriklerin arkasına yerleştirin */
+    object-fit: cover; 
+    z-index: -1; 
   }
 
 .video-background video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Videoyu ekranı kaplayacak şekilde boyutlandır */
+    object-fit: cover; 
 }
 
 #geolocation {
@@ -116,7 +115,7 @@ h2 a:hover{
     color: #fff;
 }
 
-/* Weather */
+
 #meteo-title{
     text-align: center;
     margin-top: 25px;
@@ -144,8 +143,8 @@ h2 a:hover{
 }
 .meteo-day:hover {
     background-color: rgba(255, 255, 255, 0.35);
-    transform: translateY(-5px); /* Yukarı kaydırma efekti */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Hover'da daha belirgin gölge */
+    transform: translateY(-5px); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .meteo-block{
@@ -182,7 +181,7 @@ h2 a:hover{
     font-weight: 700;
 }
 
-/* Loading */
+
 @keyframes loading {
     0% {
         -webkit-transform: rotate(0deg);
@@ -242,7 +241,6 @@ h2 a:hover{
     margin-right: 15px;
 }
 
-/* Responsive */
 @media screen and (max-width: 1100px){
     .meteo-day:first-child{
         flex: 100%;
