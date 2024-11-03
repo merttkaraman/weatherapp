@@ -1,16 +1,10 @@
 
-/*
- * Pad a string with characters
- */
 function pad(n, p, c) {
     var pad_char = typeof c !== 'undefined' ? c : '0';
     var pad = new Array(1 + p).join(pad_char);
     return (pad + n).slice(-pad.length);
 }
 
-/*
- * Convert Kelvin to Celsius
- */
 function toCelsius(kelvin) {
     var deg = kelvin - 273.15;
     return Math.round(deg);
@@ -32,7 +26,7 @@ function hslToRgb(h, s, l) {
     var r, g, b;
 
     if (s == 0) {
-        r = g = b = l; // achromatic
+        r = g = b = l; 
     } else {
         var hue2rgb = function hue2rgb(p, q, t) {
             if (t < 0) t += 1;
