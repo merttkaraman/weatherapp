@@ -44,12 +44,12 @@
             cursor: pointer; 
             width: 50px; 
             height: auto;
-            display: inline; /* Resim ve kaydırıcının yan yana durması için */
+            display: inline; 
         }
         #volumeControl {
             margin-left: 10px; 
             width: 200px; 
-            display: none; /* Başlangıçta gizli */
+            display: none; 
         }
     </style>
 </head>
@@ -95,7 +95,7 @@
             </div>
         </nav>
     </header>
-    <!-- Content -->
+ 
     <div class="container">
        <h2 id="meteo-title">
     <span style="font-weight:bold;text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 255, 255, 0.6);">Hava Durumu<a href="https://www.google.fr/maps/search/İstanbul" class="text-muted meteo-city" target="_blank" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 255, 255, 0.5);">istanbul</a>
@@ -242,7 +242,7 @@
         </section>
     </div>
       <br><br>
-    <!-- Sayfanın alt kısmına JavaScript ekleme -->
+ 
    <div class="volume-container" style="text-align: center; padding: 20px; position: relative; bottom: 0;">
     <img id="toggleImage" src="muted.png" alt="Muted" 
          style="cursor: pointer; width: 50px; height: auto; 
@@ -268,31 +268,27 @@
           const toggleImage = document.getElementById('toggleImage');
     const video = document.getElementById('backgroundVideo');
     const volumeControl = document.getElementById('volumeControl');
-    let isMuted = true; // Başlangıç durumu
+    let isMuted = true; 
 
     toggleImage.addEventListener('click', () => {
         if (isMuted) {
-            toggleImage.src = 'sound.png'; // Ses resmi ile değiştir
-            video.muted = false; // Videoyu aç
-            volumeControl.style.display = 'inline'; // Ses kaydırıcısını göster
+            toggleImage.src = 'sound.png'; 
+            video.muted = false; 
+            volumeControl.style.display = 'inline'; 
         } else {
-            toggleImage.src = 'muted.png'; // Mute resmi ile değiştir
-            video.muted = true; // Videoyu kapat
-            volumeControl.style.display = 'none'; // Ses kaydırıcısını gizle
+            toggleImage.src = 'muted.png'; 
+            video.muted = true; 
+            volumeControl.style.display = 'none'; 
         }
-        isMuted = !isMuted; // Durumu değiştir
+        isMuted = !isMuted; 
     });
-
-    // Kaydırıcıyı dinle ve video sesini ayarla
+   
     volumeControl.addEventListener('input', () => {
-        video.volume = volumeControl.value; // Kaydırıcı değerini video sesine uygula
+        video.volume = volumeControl.value; 
     });
-
-    // Sayfa yüklendiğinde başlangıç sesini ayarla
-    video.volume = volumeControl.value; // Başlangıç sesini ayarla
-
+  
+    video.volume = volumeControl.value; 
     
-
     </script>
 </body>
 
